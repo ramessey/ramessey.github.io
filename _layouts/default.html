@@ -30,7 +30,7 @@ function seek(sec){
 
    function makeVisible(){
     document.getElementById("player").style.display = "block";
-    //document.getElementById("stslabel").style.display = "inline-block";
+    document.getElementById("spacer").style.display = "inline-block";
     document.getElementById("dropone").style.display = "inline-block";
     document.getElementById("droptwo").style.display = "inline-block";
     document.getElementById("dropthree").style.display = "inline-block";
@@ -58,7 +58,7 @@ function seek(sec){
 
  <button class="visbtn" onclick="makeVisible()" id="visbut">CLICK HERE TO START THE PODCAST!</button>
  
- <button style="min-width: 8vw; background-color: #000000"> </button>
+ <div id="spacer" style="min-width: 8vw; background-color: #000000; display: none;"> </div>
  
   <<div class="dropdown">
   <button class="dropbtn" id="dropone">INTRODUCTION</button>
