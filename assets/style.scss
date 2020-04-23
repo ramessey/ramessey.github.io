@@ -19,8 +19,10 @@
 
 /* Dropdown Button */
 .dropbtn {
+  border-radius: .5vh;
   display: none;
   min-width: 16vw;
+  max-width: 16vw;
   min-height: 8vh;
   padding: 1vh;
   background-color: #494949;
