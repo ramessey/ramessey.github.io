@@ -26,6 +26,7 @@ tag.src = "https://www.youtube.com/iframe_api";
       }
 function onPlayerReady(event) {
         event.target.playVideo();
+       setTimeout(player.playVideo(),1000);
    }
 function seek(sec){
     if(player){
@@ -67,7 +68,7 @@ function seek(sec){
  <div id="spacer" style="min-width: 7.5vw; max-width: 7.5vw; background-color: #000000; display:inline-block"> </div>
  
   <<div class="dropdown">
-  <button class="dropbtn" id="dropone">INTRODUCTION</button>
+  <button class="dropbtn" id="dropone">TEST</button>
   <div class="dropdown-content">
     <a onclick="seek(0)">Leirion Gaylor Baird,<br>Mayor, City of Lincoln</a>
   </div>
