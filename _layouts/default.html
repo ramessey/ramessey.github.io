@@ -3,7 +3,7 @@
 <body style="background-color:black;">
  <link rel="stylesheet" type="text/css" href="assets/style.css">
 
- <div id="player" style="display: none;"></div>
+ <div id="player"></div>
 
   <script>
 var tag = document.createElement('script');
@@ -28,23 +28,23 @@ function seek(sec){
     }
 }
 
-   function makeVisible(){
-    document.getElementById("player").style.display = "block";
-    document.getElementById("spacer").style.display = "inline-block";
-    document.getElementById("dropone").style.display = "inline-block";
-    document.getElementById("droptwo").style.display = "inline-block";
-    document.getElementById("dropthree").style.display = "inline-block";
-    document.getElementById("dropfour").style.display = "inline-block";
-    document.getElementById("dropfive").style.display = "inline-block";
-    document.getElementById("visbut").style.display = "none";
-    document.getElementById("welcome").style.display = "none";
-    document.getElementById("instruct").style.display = "none";
-   player.playVideo();
-   }
+//    function makeVisible(){
+//     document.getElementById("player").style.display = "block";
+//     document.getElementById("spacer").style.display = "inline-block";
+//     document.getElementById("dropone").style.display = "inline-block";
+//     document.getElementById("droptwo").style.display = "inline-block";
+//     document.getElementById("dropthree").style.display = "inline-block";
+//     document.getElementById("dropfour").style.display = "inline-block";
+//     document.getElementById("dropfive").style.display = "inline-block";
+//     document.getElementById("visbut").style.display = "none";
+//     document.getElementById("welcome").style.display = "none";
+//     document.getElementById("instruct").style.display = "none";
+//    player.playVideo();
+//    }
 
   </script>
  
- <b id="stslabel" style="color:#CCCCCC; font-size:30px; display: none; padding-top:15px; padding-left:15px;">
+<!--  <b id="stslabel" style="color:#CCCCCC; font-size:30px; display: none; padding-top:15px; padding-left:15px;">
    SKIP TO SECTION:
  </b>
  
@@ -56,7 +56,7 @@ function seek(sec){
    When the video starts, you will see a row of buttons at the top. Each of the three books we are reading has its own button, which displays a list of the people who are reading sections of that book. Clicking on someones name will skip ahead to their section.
  </p>
 
- <button class="visbtn" onclick="makeVisible()" id="visbut">CLICK HERE TO START THE VIDEO!</button>
+ <button class="visbtn" onclick="makeVisible()" id="visbut">CLICK HERE TO START THE VIDEO!</button> -->
  
  <div id="spacer" style="min-width: 7.5vw; max-width: 7.5vw; background-color: #000000; display: none;"> </div>
  
