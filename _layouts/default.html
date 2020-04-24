@@ -25,8 +25,9 @@ tag.src = "https://www.youtube.com/iframe_api";
         });
       }
 function onPlayerReady(event) {
-        event.target.playVideo();
-        setTimeout(player.playVideo(),2000);
+        //event.target.playVideo();
+        player.playVideo();
+        //setTimeout(player.playVideo(),2000);
    }
 function seek(sec){
     if(player){
