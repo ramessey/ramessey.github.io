@@ -11,7 +11,7 @@ tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   
-    var player, seconds = 0;
+    var player, playing=0, seconds = 0;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           height: '390',
@@ -27,9 +27,12 @@ tag.src = "https://www.youtube.com/iframe_api";
 // function onPlayerReady(event) {
 //         event.target.playVideo();
 //       }
-//    function hoveredOver{
-//     player.playVideo();
-//    }
+   function hoveredOver{
+     if (playing == 0) {
+          playing = 1;
+          player.playVideo();
+        }
+   }
 function seek(sec){
     if(player){
         seconds = sec;
