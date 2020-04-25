@@ -25,7 +25,7 @@ tag.src = "https://www.youtube.com/iframe_api";
         });
       }
 function onPlayerStateChange(event) {
- if(instantiated==0){
+ if(event.data == YT.PlayerState.PLAYING){
   instantiated = 1;
   document.getElementById("welcome").style.display = "none";
   document.getElementById("dropone").style.display = "inline-block";
