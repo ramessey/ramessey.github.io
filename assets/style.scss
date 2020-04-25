@@ -2,6 +2,10 @@
 ---
 
 
+.bigger{
+ font-size: 1.6vw;    
+}
+
 @import "{{ site.theme }}";
 
 
@@ -25,11 +29,11 @@
   display: inline-block;
   min-width: 16vw;
   max-width: 16vw;
-  min-height: 9vh;
+  min-height: 9.5vh;
   padding: 0px;
   background-color: #494949;
   color: #f8f8f8;
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   border: none;
 }
 
