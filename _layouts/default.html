@@ -27,13 +27,12 @@ tag.src = "https://www.youtube.com/iframe_api";
 function onPlayerStateChange(event) {
  if(instantiated==0){
   instantiated = 1;
-  document.getElementById("myDIV").style.display = "none";
-  document.getElementById("myDIV").style.display = "none";
-  document.getElementById("myDIV").style.display = "none";
-  document.getElementById("myDIV").style.display = "none";
-  document.getElementById("myDIV").style.display = "none";
-  document.getElementById("myDIV").style.display = "none";
-  document.getElementById("myDIV").style.display = "none";
+  document.getElementById("welcome").style.display = "none";
+  document.getElementById("dropone").style.display = "inline-block";
+  document.getElementById("droptwo").style.display = "inline-block";
+  document.getElementById("dropthree").style.display = "inline-block";
+  document.getElementById("dropfour").style.display = "inline-block";
+  document.getElementById("dropfive").style.display = "inline-block";
  }
 }
 function seek(sec){
@@ -58,7 +57,7 @@ function seek(sec){
  
   <!-- ILIAD SECTIONS HERE  --> 
 <div class="dropdown">
-  <button class="dropbtn" id="dropfour">Skip to a reader:<br><span class="bigger">THE ILIAD</span></button>
+  <button class="dropbtn" id="droptwo">Skip to a reader:<br><span class="bigger">THE ILIAD</span></button>
   <div class="dropdown-content">
     <a onclick="seek(319)"><strong>INTRO</strong> Dr. Hart and Dr. Lippman</a>
     <a onclick="seek(521)"><strong> 1.1-60</strong> Stephen Cass</a>
@@ -86,7 +85,7 @@ function seek(sec){
 
    <!-- THUCYDIDES SECTIONS HERE  -->
  <div class="dropdown">
-  <button class="dropbtn" id="droptwo">Skip to a reader:<br><span class="bigger">THUCYDIDES</span></button>
+  <button class="dropbtn" id="dropfour">Skip to a reader:<br><span class="bigger">THUCYDIDES</span></button>
   <div class="dropdown-content">
     <a onclick="seek(3420)"><strong>INTRO</strong> Dr. Hart and Dr. Lippman</a>
     <a onclick="seek(3599)"><strong>2.47</strong> Dr. Rachel Hart</a>
