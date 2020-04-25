@@ -2,15 +2,9 @@
 <html>
 <body style="background-color: #202020;">
  <link rel="stylesheet" type="text/css" href="assets/style.css">
-<div style="position: absolute;
-    background-color: #000000;
-    min-width: 100%;
-    min-height: 90%;
-    max-width: 100%;
-    max-height: 90%;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);"></div>
+<div style="position: absolute; background-color: #000000; min-width: 100%; min-height: 90%;
+    max-width: 100%; max-height: 90%; top: 55%; left: 50%; transform: translate(-50%, -50%);"></div>
+ 
  <div id="player" allow="autoplay"></div>
 
   <script>
@@ -28,29 +22,20 @@ tag.src = "https://www.youtube.com/iframe_api";
           playerVars: {rel:0, modestbranding:1, fs:0, autoplay:1},
           events: {
             'onReady': onPlayerReady
-            //'onStateChange': onPlayerStateChange
           }
         });
       }
-function onPlayerReady(event) {
-        event.target.playVideo();
-        //player.playVideo();     
-        //setTimeout(player.playVideo(),2000);
-   }
+function onPlayerReady(event) {event.target.playVideo();}
 function seek(sec){
     if(player){
         seconds = sec;
         player.seekTo(seconds, true);
-    }
-}
+}}
 
-
-
-  </script>
+ </script>
  
-
-
- <div id="spacer" style="left-margin: 2vw; max-height: 10vh; min-width: 6.2vw; max-width: 6.5vw; background-color: #202020; display:inline-block"> </div>
+ <div id="spacer" style="left-margin: 2vw; max-height: 10vh; min-width: 6.2vw;
+          max-width: 6.5vw;background-color: #202020; display:inline-block"> </div>
  
   <div class="dropdown">
   <button class="dropbtn" id="dropone">Skip to a speaker:<br><span class="bigger">INTRODUCTION</span></button>
@@ -60,7 +45,6 @@ function seek(sec){
   </div>
 </div>
  
-
   <!-- ILIAD SECTIONS HERE  --> 
 <div class="dropdown">
   <button class="dropbtn" id="dropfour">Skip to a reader:<br><span class="bigger">THE ILIAD</span></button>
@@ -79,8 +63,6 @@ function seek(sec){
   </div>
 </div> 
  
- 
- 
   <!-- OEDIPUS SECTIONS HERE  --> 
 <div class="dropdown">
   <button class="dropbtn" id="dropthree">Skip to a reader:<br><span class="bigger">OEDIPUS</span></button>
@@ -90,7 +72,6 @@ function seek(sec){
     <a onclick="seek(3152)";><strong>151-250</strong> Dr. Stanley Lombardo</a>
   </div>
 </div>  
-
 
    <!-- THUCYDIDES SECTIONS HERE  -->
  <div class="dropdown">
@@ -108,18 +89,14 @@ function seek(sec){
   </div>
 </div>
  
- 
   <div class="dropdown">
   <button class="dropbtn" id="dropfive">Skip to a speaker:<br><span class="bigger">PARTING MESSAGE</span></button>
   <div class="dropdown-content">
     <a onclick="seek(4239)">Dr. Hart and Dr. Lippman</a>
     <a onclick="seek(4450)">Ellie Churchill</a>
     <a onclick="seek(4504)">End Credits</a>
-
   </div>
 </div>
-
-
-
+ 
 </body>
 </html> 
