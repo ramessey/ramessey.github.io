@@ -1,13 +1,8 @@
----
----
-
-
 .bigger{
  font-size: 1.6vw;    
 }
 
 @import "{{ site.theme }}";
-
 
 .visbtn{
      position: absolute;
@@ -84,6 +79,3 @@ iframe {
     left: 50%;
     transform: translate(-50%, -50%);        
 }
-// iframe:hover{
-//      hoveredOver();
-// }
