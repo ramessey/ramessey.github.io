@@ -12,7 +12,7 @@ tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
   
-    var player, playing=0, seconds = 0;
+    var player, instantiated=0, seconds = 0;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           height: '390',
@@ -25,7 +25,16 @@ tag.src = "https://www.youtube.com/iframe_api";
         });
       }
 function onPlayerStateChange(event) {
- event.target.playVideo();
+ if(instantiated==0){
+  instantiated = 1;
+  document.getElementById("myDIV").style.display = "none";
+  document.getElementById("myDIV").style.display = "none";
+  document.getElementById("myDIV").style.display = "none";
+  document.getElementById("myDIV").style.display = "none";
+  document.getElementById("myDIV").style.display = "none";
+  document.getElementById("myDIV").style.display = "none";
+  document.getElementById("myDIV").style.display = "none";
+ }
 }
 function seek(sec){
     if(player){
@@ -35,7 +44,9 @@ function seek(sec){
 
  </script>
  
- <div id="spacer" style="left-margin: 2vw; max-height: 10vh; min-width: 6.2vw; max-width: 6.5vw;background-color: #202020; display:inline-block"> </div>
+ <div id="spacer" style="left-margin: 2vw; max-height: 10vh; min-width: 5.5vw; max-width: 6.5vw;background-color: #202020; display:inline-block"> </div>
+ 
+ <b id="welcome" style="font color: #e8e8e8; font-size: 3vw; background-color: #202020; display:inline-block">WELCOME TO THE HOMERATHON 2020 PAHELLENIC PLAGUE PRODUCTION1</b>
  
   <div class="dropdown">
   <button class="dropbtn" id="dropone">Skip to a speaker:<br><span class="bigger">INTRODUCTION</span></button>
