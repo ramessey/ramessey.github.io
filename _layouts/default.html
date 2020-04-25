@@ -2,7 +2,15 @@
 <html>
 <body style="background-color:black;">
  <link rel="stylesheet" type="text/css" href="assets/style.css">
-
+<div style="position: absolute;
+    background-color: blue;
+    min-width: 100%;
+    min-height: 90%;
+    max-width: 100;
+    max-height: 90%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);"></div>
  <div id="player" allow="autoplay"></div>
 
   <script>
@@ -36,36 +44,12 @@ function seek(sec){
     }
 }
 
-//    function makeVisible(){
-//     document.getElementById("player").style.display = "block";
-//     document.getElementById("spacer").style.display = "inline-block";
-//     document.getElementById("dropone").style.display = "inline-block";
-//     document.getElementById("droptwo").style.display = "inline-block";
-//     document.getElementById("dropthree").style.display = "inline-block";
-//     document.getElementById("dropfour").style.display = "inline-block";
-//     document.getElementById("dropfive").style.display = "inline-block";
-//     document.getElementById("visbut").style.display = "none";
-//     document.getElementById("welcome").style.display = "none";
-//     document.getElementById("instruct").style.display = "none";
-//    player.playVideo();
-//    }
+
 
   </script>
  
-<!--  <b id="stslabel" style="color:#CCCCCC; font-size:30px; display: none; padding-top:15px; padding-left:15px;">
-   SKIP TO SECTION:
- </b>
- 
-  <p id="welcome" style="color:#CCCCCC; font-size:3.5vw; text-align:center; padding-top: 4vh; font-weight:bold; padding-top:2vw%;">
-   Welcome to the 2020 Homerathon Panhellenic Plague Production!
- </p>
- 
-   <p id="instruct" style="color:#CCCCCC; font-size:2vw; position: relative; text-align:center; padding-top:6vh; padding-right:5vw; padding-left:5vw;">
-   When the video starts, you will see a row of buttons at the top. Each of the three books we are reading has its own button, which displays a list of the people who are reading sections of that book. Clicking on someones name will skip ahead to their section.
- </p>
 
- <button class="visbtn" onclick="makeVisible()" id="visbut">CLICK HERE TO START THE VIDEO!</button> -->
- 
+
  <div id="spacer" style="left-margin: 1vw; max-height: 10vh; min-width: 7vw; font-weight: bold; max-width: 15vw; font-size: 1vw; background-color: #000000; font-color: #ffffff; display:inline-block"> </div>
  
   <div class="dropdown">
