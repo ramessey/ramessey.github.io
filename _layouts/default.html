@@ -18,23 +18,11 @@ tag.src = "https://www.youtube.com/iframe_api";
           height: '390',
           width: '640',
           videoId: 'R7hiBOd_klE',
-          playerVars: {rel:0, modestbranding:1, fs:0, autoplay:1},
-          events: {
-           'onStateChange': onPlayerStateChange
+          playerVars: {rel:0, modestbranding:1, fs:0, autoplay:1}
           }
         });
       }
-function onPlayerStateChange(event) {
- if(event.data == YT.PlayerState.PLAYING){
-  instantiated = 1;
-//   document.getElementById("welcome").style.display = "none";
-//   document.getElementById("dropone").style.display = "inline-block";
-//   document.getElementById("droptwo").style.display = "inline-block";
-//   document.getElementById("dropthree").style.display = "inline-block";
-//   document.getElementById("dropfour").style.display = "inline-block";
-//   document.getElementById("dropfive").style.display = "inline-block";
- }
-}
+
 function seek(sec){
     if(player){
         seconds = sec;
