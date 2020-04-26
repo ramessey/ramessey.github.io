@@ -32,7 +32,6 @@
 
 
 .dropdown-content {
-  max-height: 2.5vh;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -45,7 +44,7 @@
 .dropdown-content a {
   font-size: 2vh;
   color: #494949;
-  background-color: #0000ff;
+  background-color: #f8f8f8;
   padding: .5vh .5vh;
   text-decoration: none;
   display: block;
