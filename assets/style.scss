@@ -6,11 +6,6 @@
  font-size: 1.6vw;    
 }
 
-.strong1{
- font-weight: bold;
- padding-bottom: 2vh
-  padding-top: 2vh
-}
 
 @import "{{ site.theme }}";
 
@@ -51,7 +46,7 @@
   font-size: 2vh;
   color: #494949;
   background-color: #f8f8f8;
-  padding: .5vh .5vh;
+  padding-top: 1vh;
   text-decoration: none;
   display: block;
 }
