@@ -6,6 +6,11 @@
  font-size: 1.6vw;    
 }
 
+.strong1{
+ font-weight: bold;
+ padding-bottom: 1vh
+}
+
 @import "{{ site.theme }}";
 
 .dropbtn {
