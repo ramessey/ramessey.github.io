@@ -47,8 +47,9 @@ function go{
  var firstPage = page + 338;
  var secondPage = page + 339;
  var path = "assets/pages/";
- var firstPath = path.concat(firstPage.toString(10));
- var secondPath = path.concat(secondPage.toString(10));
+ var fileType = ".png";
+ var firstPath = path.concat(firstPage.toString(10)).concat(fileType);
+ var secondPath = path.concat(secondPage.toString(10)).concat(fileType);
  document.getElementById('prev').src = firstPath;
  document.getElementById('next').src = secondPath;
 }
