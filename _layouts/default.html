@@ -12,16 +12,19 @@ var second = 0;
 var third = 0;
 var page = 0;
    
-function cf(num){
+function cf(num, ch){
     first = num;
+    document.getElementById("first").innerHTML = ch;
 }
    
-function cs(num){
+function cs(num, ch){
     second = num;
+    document.getElementById("second").innerHTML = ch;
 }
    
-function ct(num){
+function ct(num, ch){
     third = num;
+    document.getElementById("third").innerHTML = ch;
 }
    
 function next(){
@@ -230,7 +233,7 @@ function go(){
    <div class="dropdown">
   <button class="dropbtn" id="second">2<span class="bigger"></span></button>
   <div class="dropdown-content">
-   <a onclick="">α</a>
+   <a onclick="cf(0); ">α</a>
    <a onclick="">β</a>
    <a onclick="">γ</a>
    <a onclick="">δ</a>
@@ -285,10 +288,11 @@ function go(){
    <a onclick="">ω</a>
   </div>
 </div>
-  
-<button onclick="prev()">PREV</button>
-<button onclick="next()">NEXT</button>
-<p id="testText">testingOneTwoThree</p>
+ 
+<div class="inertbtn" onclick="search()">GO</div>
+<div class="inertbtn" onclick="prev()">PREV</div>
+<div class="inertbtn" onclick="next()">NEXT</div>
+
 </div>
 
 </body>
