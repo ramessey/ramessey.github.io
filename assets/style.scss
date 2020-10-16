@@ -10,6 +10,22 @@
 
 @import "{{ site.theme }}";
 
+.inertbtn {
+  margin-top: .5vh;
+  border-radius: .5vh;
+  display: inline-block;
+  min-width: 6vw;
+  max-width: 6vw;
+  min-height: 6vw;
+  max-height: 6vw;
+  padding: 0px;
+  background-color: #3e8e41;
+  color: #000000;
+  font-size: 2vw;
+  border: none;
+}
+
+
 .dropbtn {
   margin-top: .5vh;
   border-radius: .5vh;
