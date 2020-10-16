@@ -24,26 +24,26 @@ function ct(num){
     third = num;
 }
    
-function next{
+function next(){
  if(page<61){
     page = page + 1;
     }
  go();
 }
    
-function prev{
+function prev(){
  if(page>0){
     page = page - 1;
     }
  go();
 }
    
-function search{
+function search(){
  
- go(page);
+ go();
 }
    
-function go{
+function go(){
  var firstPage = page + 338;
  var secondPage = page + 339;
  var path = "assets/pages/";
