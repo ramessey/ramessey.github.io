@@ -17,8 +17,8 @@
   display: inline-block;
   min-width: 6vw;
   max-width: 6vw;
-  min-height: 6vh;
-  max-height: 6vh;
+  min-height: 6vw;
+  max-height: 6vw;
   padding: 0px;
   background-color: #ffffff;
   color: #000000;
@@ -39,12 +39,13 @@
   background-color: #f1f1f1;
   margin-left: .2vw;
   min-width: 88vw;
+  height: 6vw;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
 .dropdown-content a {
-  font-size: 2vh;
+  font-size: 3vw;
   font-weight: bold;
   color: #494949;
   background-color: #f8f8f8;
