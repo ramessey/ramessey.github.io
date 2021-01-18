@@ -1,6 +1,10 @@
 ---
 ---
 
+
+
+@import "{{ site.theme }}";
+
 .background {
   position: absolute;
   top: 0;
@@ -42,9 +46,6 @@
  font-size: 1.6vw;
  padding-left: 0;
 }
-
-
-@import "{{ site.theme }}";
 
 .inertbtn {
   margin-top: .5vh;
