@@ -12,39 +12,25 @@
   width: 50%;
 }
 
-.background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: bg-animation 10s infinite;
-}
 
-@-webkit-keyframes bg-animation {
+@keyframes color-change {
   0% {
-    background-color: red;
+    background-color: teal;
   }
-  15% {
-    background-color: yellow;
+  20% {
+    background-color: gold;
   }
-  30% {
-    background-color: green;
-  }
-  45% {
-    background-color: blue;
+  40% {
+    background-color: indianred;
   }
   60% {
-    background-color: purple;
+    background-color: violet;
   }
-  75% {
-    background-color: pink;
-  }
-  90% {
-    background-color: brown;
+  80% {
+    background-color: green;
   }
   100% {
-    background-color: red;
+    background-color: teal;
   }
 }
 
