@@ -5,6 +5,13 @@
 
 @import "{{ site.theme }}";
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .background {
   position: absolute;
   top: 0;
