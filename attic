@@ -194,21 +194,8 @@ function go(){
 
  </script>
  
-<div id="adobe-dc-view" style="height: 360px; width: 500px;"></div>
-<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-<script type="text/javascript">
-  document.addEventListener("adobe_dc_view_sdk.ready", function(){
-    var adobeDCView = new AdobeDC.View({clientId: "<YOUR_CLIENT_ID>", divId: "adobe-dc-view"});
-    adobeDCView.previewFile({
-      content:{ location: 
-        { url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea%20Brochure.pdf"}},
-      metaData:{fileName: "Bodea Brochure.pdf"}
-    },
-    {
-      embedMode: "SIZED_CONTAINER"
-    });
-  });
-</script>
+<img id="prev" src="assets/pages/338.png" style="position: absolute; max-height: 100vh; max-width:45vw; top: 50%; left: 30%; transform: translate(-50%, -50%);"></img>
+<img id="next" src="assets/pages/339.png" style="position: absolute; max-height: 100vh; max-width:45vw; top: 50%; left: 76%; transform: translate(-50%, -50%);"></img>
     
  <div style="background-color: #000000; position: absolute; min-width: 7%; min-height: 100%; max-width:7%; max-height: 100%; top: 0; left: 0;">
   
