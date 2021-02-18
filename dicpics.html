@@ -167,7 +167,7 @@ function prev(){
 function search(){
  
  total = (576*first) + (24*second) + third;
- page = 0
+ page = 1;
  while(total > pagelist[page]){
   page = page + 1;
  }
@@ -309,8 +309,8 @@ function search(){
 }
    
 function go(){
- var firstPage = page+1;
- var secondPage = page +2;
+ var firstPage = page;
+ var secondPage = page;
  var path = "assets/homeric/";
  var fileType = ".png";
  var firstPath = path.concat(firstPage.toString(10)).concat(fileType);
