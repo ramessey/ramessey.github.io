@@ -1,31 +1,217 @@
-
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<style type="text/css">
-		body {
-			background-image: url("assets/diagTRAN.png");
-  			background-repeat: repeat;
-			background-color: coral;
-			transition: background-color 7s;
-		}
-	</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation</title>
+  <style>
+    :root {
+      --primary: #6b4f4f;
+      --accent: #d9b5a0;
+      --bg: #faf7f5;
+      --text: #2f2f2f;
+    }
 
- <p style="text-align:center; padding-top:50;"><img src="assets/ramessolid.png" alt="Logo"></p>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: white;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a.active {
+      border-color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 6rem 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h1, h2 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* RSVP Form */
+    form {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    input, button {
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+
+    input {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
 </head>
-<body>
-	<script type="text/javascript">
-		var colors = ["coral", "gold"];
+<body onload="window.scrollTo(0,0)">
 
-		var i = 1;
+    <section id="welcome" style="min-height: 100vh; padding: 8rem 1.5rem 3rem; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(180deg, #faf7f5, #fff);">
+    <div class="content">
+      <h1>Welcome</h1>
+      <img src="assets/FullSizeRender.jpeg" alt="Wedding invitation image" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" />
+      <p id="welcome-text">We are so excited to celebrate with you.</p>
+      <p style="margin-top: 2rem; font-size: 0.9rem; color: #777;">Scroll down for details</p>
+    </div>
+  </section>
 
-		window.setInterval(function(){
-			document.body.style.backgroundColor = colors[i];
-			i++;
-			if (i === colors.length){
-				i=0;
-			}
-		}, 5000);
-	</script>
+  <nav>
+    <ul>
+      <li><a href="#time" class="nav-link">Time</a></li>
+      <li><a href="#place" class="nav-link">Place</a></li>
+      <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+    </ul>
+  </nav>
+
+  <section id="time">
+    <div class="content">
+      <h1>You're Invited</h1>
+      <h2>Saturday, June 20, 2026</h2>
+      <p>Ceremony begins at 4:30 PM</p>
+      <p>Reception to follow</p>
+    </div>
+  </section>
+
+  <section id="place">
+    <div class="content">
+      <h2>The Venue</h2>
+      <p>Willow Creek Estate</p>
+      <p>1234 Country Lane<br />Napa Valley, CA</p>
+      <p>Outdoor ceremony · Formal attire</p>
+    </div>
+  </section>
+
+  <section id="rsvp">
+    <div class="content">
+      <h2>RSVP</h2>
+      <p>Please respond by May 1, 2026</p>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <button type="submit">Confirm Attendance</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+      // Personalized welcome message from URL param (?name=John)
+    const params = new URLSearchParams(window.location.search);
+    const inviteeName = params.get('name');
+
+    if (inviteeName) {
+      const welcomeText = document.getElementById('welcome-text');
+      const formattedName = inviteeName.replace(/\+/g, ' ');
+      welcomeText.textContent = `Dear ${formattedName}, we are so excited to celebrate our special day with you.`;
+    }
+  </script>
+
 </body>
 </html>
