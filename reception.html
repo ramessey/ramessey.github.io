@@ -10,6 +10,11 @@
       --accent: #d9b5a0;
       --bg: #faf7f5;
       --text: #2f2f2f;
+
+      --welcome-bg: #647043;
+      --time-bg: #6b2c35;
+      --place-bg: #53627c;
+      --rsvp-bg: #e4c5c3;
     }
 
     * {
@@ -137,10 +142,10 @@
 </head>
 <body onload="window.scrollTo(0,0)">
 
-    <section id="welcome" style="min-height: 100vh; padding: 8rem 1.5rem 3rem; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(180deg, #faf7f5, #fff);">
+      <section id="welcome" style="background: var(--welcome-bg);" style="min-height: 100vh; padding: 8rem 1.5rem 3rem; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(180deg, #faf7f5, #fff);">
     <div class="content">
       <h1>Welcome</h1>
-      <img src="assets/FullSizeRender.jpeg" alt="Wedding invitation image" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" />
+      <img src="https://via.placeholder.com/800x400" alt="Wedding invitation image" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" />
       <p id="welcome-text">We are so excited to celebrate with you.</p>
       <p style="margin-top: 2rem; font-size: 0.9rem; color: #777;">Scroll down for details</p>
     </div>
@@ -154,36 +159,35 @@
     </ul>
   </nav>
 
-  <section id="time">
+    <section id="time" style="background: var(--time-bg);">
     <div class="content">
       <h1>You're Invited</h1>
-      <h2>Saturday, May 30th, 2026</h2>
-      <p>Cocktail hour begins at 2:30PM</p>
-      <p>Dinner begins at 4:00PM</p>
-      <p>Dancing until 9:00PM</p>
+      <h2>Saturday, June 20, 2026</h2>
+      <p>Ceremony begins at 4:30 PM</p>
+      <p>Reception to follow</p>
     </div>
   </section>
 
-<section id="place">
-<div class="content">
-<h2>The Venue</h2>
-<p>Mallet Lodge, Platte River State Park</p>
-<p>14421 346th St<br />Louisville, NE 68037</p>
-<p>Outdoor Ceremony · Sunday Best Attire</p>
+      <section id="place" style="background: var(--place-bg);">
+    <div class="content">
+      <h2>The Venue</h2>
+      <p>Platte River State Park</p>
+      <p>14421 346th St<br />Louisville, NE 68037</p>
+      <p>Outdoor ceremony · Formal attire</p>
 
-<div style="margin-top: 2rem; width: 100%;">
-<iframe
-title="latte River State Park Map"
-src="https://www.google.com/maps?q=Mallet+Lodge+Platte+River+State+Park+Nebraska&output=embed"
-style="border:0; width:100%; height:300px; border-radius:8px;"
-loading="lazy"
-referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-</div>
-</div>
-</section>
+      <div style="margin-top: 2rem; width: 100%;">
+        <iframe
+          title="Platte River State Park Map"
+          src="https://www.google.com/maps?q=Mallet+Lodge+Platte+River+State+Park+Nebraska&output=embed"
+          style="border:0; width:100%; height:300px; border-radius:8px;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
 
-  <section id="rsvp">
+    <section id="rsvp" style="background: var(--rsvp-bg);">
     <div class="content">
       <h2>RSVP</h2>
       <p>Please respond by May 1, 2026</p>
