@@ -27,7 +27,8 @@
       font-family: "Times New Roman", Times, serif;
       background: var(--bg);
       color: #fffcf3;
-      line-height: 1.6;
+      line-height: 1.7;
+      font-size: 1.125rem; /* base text size increase */
       scroll-behavior: smooth;
     }
 
@@ -37,7 +38,8 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: #391b02;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255,255,255,0.2);
       z-index: 1000;
     }
@@ -78,14 +80,11 @@
     }
 
     h1, h2 {
-      font-family: "Citadel Script", "Brush Script MT", cursive;
-      font-weight: 400;
-      margin-bottom: 1rem;
-      color: #fffcf3;
+      font-size: 2.25rem;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
     }
 
     h2 {
@@ -147,7 +146,7 @@
       <section id="welcome" style="background: var(--welcome-bg);" style="min-height: 100vh; padding: 8rem 1.5rem 3rem; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(180deg, #faf7f5, #fff);">
     <div class="content">
       <h1>Welcome</h1>
-      <img src="https://via.placeholder.com/800x400" alt="Wedding invitation image" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" />
+      <img src="assets/FullSizeRender.jpeg" alt="Engagement photo" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" alt="Wedding invitation image" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" />
       <p id="welcome-text">We are so excited to celebrate with you.</p>
       <p style="margin-top: 2rem; font-size: 0.9rem; color: #777;">Scroll down for details</p>
     </div>
@@ -207,6 +206,17 @@
   <script>
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
+
+    // Smooth animated scrolling for nav clicks
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
 
     const observer = new IntersectionObserver(
       entries => {
