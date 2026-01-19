@@ -27,7 +27,7 @@
       font-family: "Times New Roman", Times, serif;
       background: var(--bg);
       color: #fffcf3;
-      line-height: 1.7;
+      /* line-height: 1.7; */
       font-size: 2rem; /* base text size increase */
       scroll-behavior: smooth;
     }
@@ -210,7 +210,7 @@
     if (inviteeName) {
       const welcomeText = document.getElementById('welcome-text');
       const formattedName = inviteeName.replace(/\+/g, ' ');
-      welcomeText.textContent = `Dear ${formattedName}, we are so excited to celebrate our special day with you.`;
+      welcomeText.textContent = `Dear ${formattedName}, we are so excited to celebrate our special day with you! Please scroll down for details`;
     }
   </script>
 
