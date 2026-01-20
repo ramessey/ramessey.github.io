@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Imperial+Script&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wedding Invitation</title>
@@ -11,10 +16,10 @@
       --bg: #faf7f5;
       --text: #2f2f2f;
 
-      --welcome-bg: #647043;
-      --time-bg: #6b2c35;
-      --place-bg: #53627c;
-      --rsvp-bg: #e4c5c3;
+      --welcome-bg: rgb(100,112,67,.8);
+      --time-bg: rgb(107,44,53,.8);
+      --place-bg: rgb(83,98,124,.8);
+      --rsvp-bg: rgb(228,197,195,.75);
     }
 
     * {
@@ -25,11 +30,13 @@
 
     body {
       font-family: "Times New Roman", Times, serif;
-      background: var(--bg);
+      Background-color: var(--bg);
       color: #fffcf3;
       /* line-height: 1.7; */
       font-size: 2rem; /* base text size increase */
       scroll-behavior: smooth;
+background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     }
 
     /* Navigation */
@@ -79,9 +86,23 @@
       width: 100%;
     }
 
+    #welcome .content {
+      background-color: rgb(255,255,255,0.7);
+      border-radius: 50px;
+      box-shadow:  
+        0 0 50px rgba(255,255,255,0.7),
+        0 0 40px rgba(255,255,255,0.7),
+        0 0 30px rgba(255,255,255,0.7);
+    }
+
+    .dark-text {
+      color: #170b01;
+    }
+
 
     h1{
-      font-family: "Citadel Script", "Brush Script MT", cursive;
+      font-family: "Monsieur La Doulaise", cursive;
+      /* font-family: "Gwendolyn", cursive;  */
       font-weight: 400;
       margin-bottom: 1rem;
       font-size: 4rem;
@@ -100,12 +121,23 @@
       text-align: left;
     }
 
-    /* RSVP Form */
-    form {
-      display: grid;
-      gap: 1rem;
-      margin-top: 1.5rem;
+    #welcome {
+        /* background-image: url("https://travelawaits.com/wp-content/uploads/2021/06/platte-river-state-park-og.jpg"); */
+        /* background-image: url("https://nebraskapassport.com/sites/default/files/inline-images/Platte_River_SP_Sunset_MForsberg_0.jpg"); */
+            background-image: url("assets/Platte.jpeg");
+            background-color: rgba(255, 255, 255, 0);
+background-blend-mode: lighten;
+        background-size:     cover;   
     }
+
+    #rsvp{
+      background: var(--rsvp-bg);
+    }
+
+    #rsvp h1{
+      font-family: "Imperial Script", cursive;
+    }
+
 
     /* Mobile tweaks */
     @media (max-width: 600px) {
@@ -121,16 +153,24 @@
 </head>
 <body onload="window.scrollTo(0,0)">
 
-      <section id="welcome" style="background: var(--welcome-bg);" style="min-height: 100vh; padding: 8rem 1.5rem 3rem; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(180deg, #faf7f5, #fff);">
+	<section id="welcome">
+        <div class="content dark-text">
+            <h1>Welcome</h1>
+            <p id="welcome-text">We are so excited to celebrate with you! Please scroll down for details.</p>
+        </div>
+	</section>
+
+    <section id="story" style="background: var(--welcome-bg);">
     <div class="content">
-      <h1>Welcome</h1>
+      <h1>Our Story</h1>
       <img src="assets/FullSizeRender.jpeg" alt="Engagement photo" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" alt="Wedding invitation image" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" />
-      <p id="welcome-text">We are so excited to celebrate with you! Please scroll down for details.</p>
+      <p>Once upon a time in a galaxy far far away...</p>
     </div>
   </section>
 
   <nav>
     <ul>
+      <li><a href="#story" class="nav-link">Story</a></li>
       <li><a href="#time" class="nav-link">Time</a></li>
       <li><a href="#place" class="nav-link">Place</a></li>
       <li><a href="#rsvp" class="nav-link">RSVP</a></li>
@@ -139,7 +179,7 @@
 
     <section id="time" style="background: var(--time-bg);">
     <div class="content">
-      <h1>You're Invited</h1>
+      <h1>Youre Invited</h1>
       <h2>Saturday, May 30th, 2026</h2>
       <p></p>
       <p>Cocktail hour at 2:30pm</p>
@@ -167,7 +207,7 @@
     </div>
   </section>
 
-  <section id="rsvp" style="background: var(--rsvp-bg); color: #170b01;">
+  <section id="rsvp" class="dark-text">
       <style>
         #rsvp h1, #rsvp h2 { color: #170b01; }
       </style>
