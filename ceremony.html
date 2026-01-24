@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Imperial+Script&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation</title>
+  <style>
+    :root {
+      --primary: #6b4f4f;
+      --accent: #d9b5a0;
+      --bg: #faf7f5;
+      --text: #2f2f2f;
+
+      --story-bg: rgb(100,112,67,.8);
+      --time-bg: rgb(107,44,53,.8);
+      --place-bg: rgb(83,98,124,.8);
+      --rsvp-bg: rgb(57,27,2,.75);
+      --gift-bg: rgb(228,197,195,.75);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Times New Roman", Times, serif;
+      Background-color: var(--bg);
+      color: #fffcf3;
+      /* line-height: 1.7; */
+      font-size: 2rem; /* base text size increase */
+      scroll-behavior: smooth;
+      background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.6);
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fffcf3;
+      font-weight: 500;
+      padding-bottom: 0.25rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a.active {
+      border-color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 6rem 1.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 600px;
+      width: 100%;
+    }
+
+    #welcome .content {
+      background-color: rgb(255,255,255,0.7);
+      border-radius: 50px;
+      box-shadow:  
+        0 0 50px rgba(255,255,255,0.7),
+        0 0 40px rgba(255,255,255,0.7),
+        0 0 30px rgba(255,255,255,0.7);
+    }
+
+    .dark-text {
+      color: #170b01;
+    }
+
+    img {
+      max-width: 600px; 
+      margin: 1.5rem auto; 
+      display: block; 
+      border-radius: 8px;
+    }
+
+
+    h1 {
+      font-family: "Monsieur La Doulaise", cursive;
+      /* font-family: "Gwendolyn", cursive;  */
+      font-weight: 400;
+      margin-bottom: 1rem;
+      font-size: 4rem;
+    }
+
+    h2 {
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    .details {
+      text-align: left;
+      font-size: .9em;
+    }
+
+    #welcome {
+      background-image: url("assets/Platte.jpeg");
+      background-color: rgba(255, 255, 255, 0);
+      background-blend-mode: lighten;
+      background-size:     cover;   
+    }
+
+    #rsvp{
+      background: var(--rsvp-bg);
+    }
+
+    #rsvp h1{
+      font-family: "Imperial Script", cursive;
+    }
+
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 1rem;
+      }
+
+      /* h1 {
+        font-size: 2rem;
+      } */
+    }
+  </style>
+</head>
+<body onload="window.scrollTo(0,0)">
+
+	<section id="welcome">
+        <div class="content dark-text">
+            <h1>Welcome</h1>
+            <p id="welcome-text">We are so excited to celebrate with you! Please scroll down for details.</p>
+        </div>
+	</section>
+
+  <nav>
+    <ul>
+      <li><a href="#time" class="nav-link">Time</a></li>
+      <li><a href="#place" class="nav-link">Place</a></li>
+      <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+      <li><a href="#gift" class="nav-link">Gift</a></li>
+    </ul>
+  </nav>
+
+    <section id="time" style="background: var(--time-bg);">
+    <div class="content">
+      <h1>Youre Invited</h1>
+      <img src="assets/FullSizeRender.jpeg" style="width: 50%;" />
+      <h2>Saturday, May 30th, 2026</h2>
+      <p></p>
+      <p>Cocktail hour at 2:30pm</p>
+      <p>Dinner at 4:00 PM</p>
+      <p>Dancing until 9:00 PM</p>
+    </div>
+  </section>
+
+  <section id="place" style="background: var(--place-bg);">
+    <div class="content">
+      <h1>The Venue</h1>
+      <h2>Platte River State Park</h2>
+      <p>14421 346th St<br/>Louisville, NE 68037</p>
+      <!-- <p class="details">Our reception will be indoors at Mallet Lodge. Please wear Sunday best attire. Carpooling is recommended due to parking limitations, but guests will be reimbursed for park entry fees!</p> -->
+      <p class="details">Ceremony at the outdoor amphitheater (weather permitting), festivities to follow at Mallet Lodge. Sunday best attire. Park entry fees will be reimbursed, but carpooling is recommended to ensure nearby parking.</p>
+
+      <div style="margin-top: 2rem; width: 100%;">
+        <iframe
+          title="Platte River State Park Map"
+          src="https://www.google.com/maps?q=Mallet+Lodge+Platte+River+State+Park+Nebraska&output=embed"
+          style="border:0; width:100%; height:300px; border-radius:8px;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" style="background: var(--rsvp-bg);">
+    <div class="content">
+      <h1>RSVP</h1>
+      <h2>Please text (702) 904-0945 by March 1st</h2>
+      <p></p>
+      <p class="details">Include your full name(s), whether you plan to attend, and whether you have any dietary restricions.</p>
+      <p class="details">Due to venue restrictions, we may not be able to accommodate plus ones. We will make our final determination after the RSVP deadline, please confirm your attendance so we can save you a seat!</p>
+    </div>
+  </section>
+
+    <section id="gift" style="background: var(--gift-bg);" class="dark-text" >
+    <div class="content">
+      <h1>Gifts</h1>
+      <img src="assets/gift.png" style="width: 30%;"/>
+      <p class="details">We are blessed to have everything we need. In lieu of a traditional gift registry, we are hosting a honeymoon fund. Contributions are appreciated but not expected.</p>
+      <p class="details">We don't want to get anyone in the habit of sending money to random internet links, so for those who intend to contribute, please bring an envelope with cash or check. </p>
+    </div>
+  </section>
+
+    <section style="background: var(--story-bg);">
+    <div class="content">
+      <h1>Our Story</h1>
+      <p class="details">We are blessed to have everything we need. In lieu of a traditional gift registry, we are hosting a honeymoon fund. Contributions are appreciated but not expected.</p>
+      <p class="details">We don't want to get anyone in the habit of sending money to random internet links, so for those who intend to contribute, please bring an envelope with cash or check. </p>
+    </div>
+  </section>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Smooth animated scrolling for nav clicks
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach(section => observer.observe(section));
+      // Personalized welcome message from URL param (?name=John)
+    const params = new URLSearchParams(window.location.search);
+    const inviteeName = params.get('name');
+
+    if (inviteeName) {
+      const welcomeText = document.getElementById('welcome-text');
+      const formattedName = inviteeName.replace(/\+/g, ' ');
+      welcomeText.textContent = `Dear ${formattedName}, we are so excited to celebrate with you! Please scroll down for details`;
+    }
+  </script>
+
+</body>
+</html>
