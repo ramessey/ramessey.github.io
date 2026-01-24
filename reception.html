@@ -16,10 +16,11 @@
       --bg: #faf7f5;
       --text: #2f2f2f;
 
-      --welcome-bg: rgb(100,112,67,.8);
+      --story-bg: rgb(100,112,67,.8);
       --time-bg: rgb(107,44,53,.8);
       --place-bg: rgb(83,98,124,.8);
-      --rsvp-bg: rgb(228,197,195,.75);
+      --rsvp-bg: rgb(57,27,2,.75);
+      --gift-bg: rgb(228,197,195,.75);
     }
 
     * {
@@ -35,8 +36,12 @@
       /* line-height: 1.7; */
       font-size: 2rem; /* base text size increase */
       scroll-behavior: smooth;
-background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
+      background-image: url("https://www.transparenttextures.com/patterns/black-paper.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    }
+
+    a {
+      color: inherit;
     }
 
     /* Navigation */
@@ -99,13 +104,24 @@ background-image: url("https://www.transparenttextures.com/patterns/black-paper.
       color: #170b01;
     }
 
+    img {
+      max-width: 600px; 
+      display: block; 
+      margin: auto;
+      border-radius: 8px;
+    }
 
-    h1{
+
+    h1 {
       font-family: "Monsieur La Doulaise", cursive;
       /* font-family: "Gwendolyn", cursive;  */
       font-weight: 400;
       margin-bottom: 1rem;
       font-size: 4rem;
+    }
+
+    #gift h1{
+      margin-bottom: 0;
     }
 
     h2 {
@@ -117,17 +133,32 @@ background-image: url("https://www.transparenttextures.com/patterns/black-paper.
       margin-bottom: 2rem;
     }
 
-    .details {
+    #time p {
+      margin-bottom: 1rem;
+    }
+
+    table {
       text-align: left;
     }
 
+    td {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    tr{
+      border-bottom: 2px solid white;
+    }
+
+    .details {
+      font-size: .85em;
+    }
+
     #welcome {
-        /* background-image: url("https://travelawaits.com/wp-content/uploads/2021/06/platte-river-state-park-og.jpg"); */
-        /* background-image: url("https://nebraskapassport.com/sites/default/files/inline-images/Platte_River_SP_Sunset_MForsberg_0.jpg"); */
-            background-image: url("assets/Platte.jpeg");
-            background-color: rgba(255, 255, 255, 0);
-background-blend-mode: lighten;
-        background-size:     cover;   
+      background-image: url("assets/Platte.jpeg");
+      background-color: rgba(255, 255, 255, 0);
+      background-blend-mode: lighten;
+      background-size:     cover;   
     }
 
     #rsvp{
@@ -145,9 +176,13 @@ background-blend-mode: lighten;
         gap: 1rem;
       }
 
-      h1 {
-        font-size: 2rem;
+      #welcome {
+        background-image: url("assets/PlatteMobile.jpeg");
       }
+
+      /* h1 {
+        font-size: 3rem;
+      } */
     }
   </style>
 </head>
@@ -160,31 +195,55 @@ background-blend-mode: lighten;
         </div>
 	</section>
 
-    <section id="story" style="background: var(--welcome-bg);">
-    <div class="content">
-      <h1>Our Story</h1>
-      <img src="assets/FullSizeRender.jpeg" alt="Engagement photo" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" alt="Wedding invitation image" style="width: 100%; max-width: 600px; margin: 1.5rem auto; display: block; border-radius: 8px;" />
-      <p>Once upon a time in a galaxy far far away...</p>
-    </div>
-  </section>
-
   <nav>
     <ul>
-      <li><a href="#story" class="nav-link">Story</a></li>
       <li><a href="#time" class="nav-link">Time</a></li>
       <li><a href="#place" class="nav-link">Place</a></li>
       <li><a href="#rsvp" class="nav-link">RSVP</a></li>
+      <li><a href="#gift" class="nav-link">Gift</a></li>
     </ul>
   </nav>
 
-    <section id="time" style="background: var(--time-bg);">
+    <!-- <section id="time" style="background: var(--time-bg);">
+    <div class="content">
+      <h1>Youre Invited</h1>
+      <div>
+        <h2>Saturday, May 30th, 2026</h2>
+        <p></p>
+        <div style="display: flex; justify-content: space-between;">
+          <p>Ceremony</p>
+          <p>1:30 PM</p>
+        </div>
+        <p>Cocktail hour at 2:30 PM</p>
+        <p>Dinner at 4:00 PM</p>
+        <p>Dancing until 9:00 PM</p>
+      </div>
+    </div>
+  </section> -->
+
+  <section id="time" style="background: var(--time-bg);">
     <div class="content">
       <h1>Youre Invited</h1>
       <h2>Saturday, May 30th, 2026</h2>
       <p></p>
-      <p>Cocktail hour at 2:30pm</p>
-      <p>Dinner at 4:00 PM</p>
-      <p>Dancing until 9:00 PM</p>
+      <div style="justify-content: center; display: flex;"><table>
+        <tr>
+          <td><p>Ceremony</p></td>
+          <td><p>1:30 PM</p></td>
+        </tr>
+        <tr>
+          <td><p>Cocktail hour</p></td>
+          <td><p>2:30 PM</p></td>
+        </tr>
+        <tr>
+          <td><p>Dinner</p></td>
+          <td><p>4:00 PM</p></td>
+        </tr>
+        <tr>
+          <td><p>Dancing until</p></td>
+          <td><p>9:00 PM</p></td>
+        </tr>
+      </table></div>
     </div>
   </section>
 
@@ -193,7 +252,8 @@ background-blend-mode: lighten;
       <h1>The Venue</h1>
       <h2>Platte River State Park</h2>
       <p>14421 346th St<br/>Louisville, NE 68037</p>
-      <p class="details">Our reception will be indoors at Mallet Lodge. Please wear Sunday best attire. Carpooling is recommended due to parking limitations, but guests will be reimbursed for park entry fees!</p>
+      <!-- <p class="details">Our reception will be indoors at Mallet Lodge. Please wear Sunday best attire. Carpooling is recommended due to parking limitations, but guests will be reimbursed for park entry fees!</p> -->
+      <p class="details">Ceremony at the outdoor amphitheater (weather permitting), festivities to follow at Mallet Lodge. Sunday best attire. Park entry fees will be reimbursed, but carpooling is recommended to ensure nearby parking.</p>
 
       <div style="margin-top: 2rem; width: 100%;">
         <iframe
@@ -207,16 +267,31 @@ background-blend-mode: lighten;
     </div>
   </section>
 
-  <section id="rsvp" class="dark-text">
-      <style>
-        #rsvp h1, #rsvp h2 { color: #170b01; }
-      </style>
+  <section id="rsvp" style="background: var(--rsvp-bg);">
     <div class="content">
       <h1>RSVP</h1>
-      <h2>Please text (702) 904-0945 by April 1st</h2>
+      <h2>Please text <a href="tel:7029040945">(702) 904-0945</a> by March 1st</h2>
       <p></p>
       <p class="details">Include your full name(s), whether you plan to attend, and whether you have any dietary restricions.</p>
       <p class="details">Due to venue restrictions, we may not be able to accommodate plus ones. We will make our final determination after the RSVP deadline, please confirm your attendance so we can save you a seat!</p>
+    </div>
+  </section>
+
+    <section id="gift" style="background: var(--gift-bg);" class="dark-text" >
+    <div class="content">
+      <h1>Gifts</h1>
+      <img src="assets/gift.png" style="width: 25%;"/>
+      <p class="details">We are blessed to have everything we need. In lieu of a traditional gift registry, we are hosting a honeymoon fund. Contributions are appreciated but not expected.</p>
+      <p class="details">We don't want to get anyone in the habit of sending money to random internet links, so for those who intend to contribute, please bring an envelope with cash or check. </p>
+    </div>
+  </section>
+
+    <section style="background: var(--story-bg);">
+    <div class="content">
+      <h1>Our Story</h1>
+	    <img src="assets/FullSizeRender.jpeg" style="width: 50%; margin: 1.5rem auto;" />
+      <p class="details">We are blessed to have everything we need. In lieu of a traditional gift registry, we are hosting a honeymoon fund. Contributions are appreciated but not expected.</p>
+      <p class="details">We don't want to get anyone in the habit of sending money to random internet links, so for those who intend to contribute, please bring an envelope with cash or check. </p>
     </div>
   </section>
 
